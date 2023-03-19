@@ -5,22 +5,6 @@ If the coco dataset is not present in your local system, then the bash script "c
 download the dataset. The total size of the dataset is about 20GB.
 ex: bash coco_download.sh
 
-The heirarchy of the downloaded dataset:
-(root directory)
-   |
-   |
-   |--data
-   		|
-   		|--coco
-   			|
-   			|--images
-   			|	|
-   			|	|--train
-   			|	|
-   			|	|--val
-				|
-				|--annotations
-
 The annotations and images are to be stored in a similar fashion as in the official website of the dataset
 i.e. the images and annotations should go in coco/images/ and coco/annotations/ respectively. 
 
@@ -176,15 +160,11 @@ def get_dict(path):
 
 	return instance_dict
 
-#Till here we have obtained the dictionary that contains the images and the bboxes.
-#------------------------------------------------------------------------------------------------------------------
-
 '''
 This part generates the txt files and copies the images from the coco datset into another folder, following the 
 heirarchy mentioned above.
 The images will be renamed as "Image_2.jpg", "Image_3.jpg" etc.
 
-Have to create directories(same heirarchy) prior to generating text files.
 '''
 train_dict = get_dict(train_json_path)
 val_dict = get_dict(val_json_path)
