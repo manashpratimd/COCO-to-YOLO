@@ -1,0 +1,12 @@
+extract_id: [80,89] #id number of the classes whose extraction is required
+
+start_index: 0 #The starting class index, to be stored in yolo format. 
+               #If set to 0, then 0 will denote the first class and so on, as mentioned in the extract_id list.
+
+Path_to_train: "./data/coco/annotations/instances_train2017.json" # Path to the coco/annotations/instance_train.json
+
+Path_to_val: "./data/coco/annotations/instances_val2017.json"  # Path to the coco/annotations/instance_val.json
+
+Train_image: "./data/coco/images/train" #Path to coco/images/train
+
+Val_image: "./data/coco/images/val" # Path to coco/images/val
